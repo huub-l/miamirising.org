@@ -83,6 +83,11 @@ Config::define('DISALLOW_FILE_EDIT', true);
 Config::define('DISALLOW_FILE_MODS', true);
 
 /**
+ * PODS
+ */
+Config::define('PODS_SHORTCODE_ALLOW_SUB_SHORTCODES', true);
+
+/**
  * Debugging Settings
  */
 Config::define('WP_DEBUG_DISPLAY', false);

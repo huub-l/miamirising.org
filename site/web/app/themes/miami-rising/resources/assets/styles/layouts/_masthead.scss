@@ -1,0 +1,73 @@
+.ui.segment.masthead {
+  background: -webkit-linear-gradient(to right, rgb(127,255,212), rgb(8, 193, 131));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgb(127,255,212), rgb(10, 203, 138)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: url(../images/pollution-truck-colorized.svg);
+  background-size: cover;
+  background-position: bottom center;
+  &* {
+    color:#ffffff;
+  }
+  .anime-trigger {
+    display:block;
+    height:5px; max-height:5px;
+    width:100%;
+    min-height:5px!important;
+    margin-bottom:5rem;
+  }
+  .ui.anime-banner {
+    svg {
+      overflow: visible;
+      pointer-events: none!important;
+      #miami-rising-logo {
+        transform: rotateX('15deg');
+        pointer-events: none!important;
+        #MIAMI, #RISING {
+          pointer-events: none!important;
+        }
+      }
+    }
+    #rise-logo {
+      left: 0;
+      right: 0;
+      max-width:75%;
+      margin-top:5rem; margin-bottom:5rem;
+      #event-logo {
+        z-index:2;
+      }
+    }
+    #can-do {
+      max-width:60vw;
+      opacity:0;
+      text-align:right;
+    }
+  }
+}
+
+.block {
+  position:relative;
+  z-index:10;
+  padding:5rem 0rem 0rem 0rem;
+  background:rgba(255,255,255,1);
+  h2 {
+    font-size:3rem;
+    padding-right:2rem;
+    margin-bottom:2rem;
+    .highlight {
+      display: inline;
+      background: $color-primary;
+      color: $color-white;
+      padding: .5rem;
+    }
+
+    .highlight--wrapping {
+      position: relative;
+      left: .5rem;
+      padding-left: 0;
+      box-shadow: .5rem 0 0 $color-primary,
+                  -.5rem 0 0 $color-primary;
+    }
+  }
+  p {
+    padding-right:2rem;
+  }
+}

@@ -17,3 +17,6 @@ web/.htaccess
 
 # Composer
 /vendor
+
+# Project Specific
+web/app/plugins/elementor-pro/*
