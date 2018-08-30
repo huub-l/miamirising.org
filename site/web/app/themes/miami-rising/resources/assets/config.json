@@ -8,7 +8,7 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/wp-content/themes/miami-rising",
+  "publicPath": "/app/themes/miami-rising",
   "devUrl": "http://miamirising.pix",
   "proxyUrl": "http://localhost:3005",
   "cacheBusting": "[name]_[hash:8]",
