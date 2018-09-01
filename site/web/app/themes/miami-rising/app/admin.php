@@ -98,7 +98,7 @@ add_filter( 'contextual_help', function ( $old_help, $screen_id, $screen ) {
     $screen->remove_help_tab( 'customize-preview-themes' );
     $screen->remove_help_tab( 'compatibility-problems' );
     $screen->remove_help_tab( 'adding-plugins' );
-    $screen->remove_help_tab( 'screen-display' );
+    // $screen->remove_help_tab( 'screen-display' );
     $screen->remove_help_tab( 'actions' );
     $screen->remove_help_tab( 'user-roles' );
     $screen->remove_help_tab( 'press-this' );
@@ -114,7 +114,7 @@ add_filter( 'contextual_help', function ( $old_help, $screen_id, $screen ) {
  * Remove Screen Options tab
  * @link https://developer.wordpress.org/reference/hooks/screen_options_show_screen/
  */
-add_filter( 'screen_options_show_screen', '__return_false' );
+// add_filter( 'screen_options_show_screen', '__return_false' );
 
   /**
  * Removing dashboard widgets.

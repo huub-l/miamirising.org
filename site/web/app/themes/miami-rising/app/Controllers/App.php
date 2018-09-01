@@ -37,6 +37,9 @@ class App extends Controller
             }
             return __('Latest Posts', 'sage');
         }
+        if (is_post_type_archive('event')) {
+            return "Events";
+        }
         if (is_archive()) {
             return get_the_archive_title();
         }
@@ -49,21 +52,38 @@ class App extends Controller
         return get_the_title();
     }
 
-    public static function semantic_navigation()
+    public static function semantic_navigation($navigation = 'primary_navigation')
     {
-        return wp_nav_menu([
-            'theme_location'  => 'primary_navigation',
-            'before'          => '',
-            'after'           => '',
-            'link_before'     => '',
-            'link_after'      => '',
-            'depth'           => 0,
-            'menu_id'         => '',
-            'menu_class'      => '',
-            'items_wrap'      => '<div class="ui container">%3$s</div>',
-            'echo'            => false,
-            'walker'          => new Semantic_Walker()
-          ]);
+        if($navigation=='branding_navigation') {
+            return wp_nav_menu([
+                'theme_location'  => 'branding_navigation',
+                'before'          => '',
+                'after'           => '',
+                'link_before'     => '',
+                'link_after'      => '',
+                'depth'           => 0,
+                'menu_id'         => '',
+                'menu_class'      => '',
+                'items_wrap'      => '%3$s',
+                'echo'            => false,
+                'walker'          => new Semantic_Walker()
+              ]);
+        }
+        if($navigation=='primary_navigation') {
+            return wp_nav_menu([
+                'theme_location'  => 'primary_navigation',
+                'before'          => '',
+                'after'           => '',
+                'link_before'     => '',
+                'link_after'      => '',
+                'depth'           => 0,
+                'menu_id'         => '',
+                'menu_class'      => '',
+                'items_wrap'      => '%3$s',
+                'echo'            => false,
+                'walker'          => new Semantic_Walker()
+            ]);
+        }
     }
 
 }

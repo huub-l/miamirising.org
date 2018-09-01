@@ -5,3 +5,25 @@ $color-white:           rgba(255,255,255,1);
 
 /** Box Model  */
 $spacer:                2rem;
+
+/** Mixins */
+$tablet-width: 768px;
+$desktop-width: 1200px;
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

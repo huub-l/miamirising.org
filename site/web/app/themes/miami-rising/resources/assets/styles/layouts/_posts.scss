@@ -1,0 +1,29 @@
+.event-list-entry {
+  margin-top:2rem;
+  padding:2rem auto 2rem auto;
+  .ui.label {
+    margin-bottom:0rem;
+  }
+  h1 {
+    margin:.5rem 0rem .5rem 0rem;
+    padding:0rem;
+  }
+  h4 {
+    padding-top:.5rem;
+    margin-top:0rem;
+    line-height:2rem;
+  }
+  .listing-cta {
+    margin-top:1.5rem;
+  }
+}
+
+  .single-event-content {
+    h3.ui.header.sponsor {
+      margin-top: 0rem;
+      @include mobile {
+        margin-top:2rem;
+      }
+    }
+  }
+

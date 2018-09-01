@@ -6,7 +6,7 @@
     <div role="document">
       <div class="content">
         <main class="main">
-          @include('partials.miami-rise-event-svg')
+          @include('partials.front-page.miami-rise-event-svg')
           @include('partials.front-page.synopsis')
         </main>
       </div>

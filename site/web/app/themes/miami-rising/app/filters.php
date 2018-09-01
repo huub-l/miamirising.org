@@ -17,6 +17,14 @@ add_filter('body_class', function (array $classes) {
         $classes[] = basename('front-page');
     }
 
+    if (is_post_type_archive('events')) {
+        $classes[] = basename('all-events');
+    }
+
+    if (is_post_type_archive('groups')) {
+        $classes[] = basename('all-groups');
+    }
+
     /** Add a global class to everything.
      *  We want it to come first, so stuff its filter does can be overridden.
      */

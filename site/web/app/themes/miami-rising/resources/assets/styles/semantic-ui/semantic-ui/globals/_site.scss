@@ -14,7 +14,7 @@
 *******************************/
 
 @font-face {
-  font-family:'BebasNeue';
+  font-family: $display-family;
   src: url('./../fonts/bebasneue.otf') format('opentype');
 }
 
@@ -55,21 +55,24 @@ h5 {
   padding: 0em;
 }
 h1 {
-  font-family: 'BebasNeue',sans-serif;
+  font-family: $display-family;
   min-height: 1rem;
   font-size: 2rem;
 }
 h2 {
-  font-family: 'BebasNeue',sans-serif;
+  font-family: $display-family;
   font-size: 1.71428571rem;
 }
 h3 {
+  font-family: $display-family;
   font-size: 1.28571429rem;
 }
 h4 {
+  font-family: $display-family;
   font-size: 1.07142857rem;
 }
 h5 {
+  font-family: $display-family;
   font-size: 1rem;
 }
 h1:first-child,

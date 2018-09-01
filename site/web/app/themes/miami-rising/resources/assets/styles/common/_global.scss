@@ -18,7 +18,7 @@ body {
   textarea,
   input,
   select option {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: $font-family;
   }
   .teal-highlight {
     display: inline!important;

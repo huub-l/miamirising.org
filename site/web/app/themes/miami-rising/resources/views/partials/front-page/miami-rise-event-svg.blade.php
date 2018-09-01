@@ -1,5 +1,3 @@
-<?php namespace App; ?>
-
 <div class="ui inverted vertical masthead segment">
   <div class="ui container anime-banner">
   <div class="anime-trigger"></div>
@@ -86,7 +84,7 @@
               </g>
           </svg>
         </div>
-        <div class="sixteen wide mobile six wide tablet six wide computer column">
+        <div id="can-do-svg-container" class="sixteen wide mobile six wide tablet six wide computer column">
           <svg id="can-do" viewBox="0 0 677 878" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="Women-I-Can-Do-It">
