@@ -11,9 +11,9 @@
       Action
     </a>
     <h1 class="ui header">@php echo the_title(); @endphp
-      <div class="sub header"><em>@php echo date( "F j, Y, g:i a", $actionpod->display( 'action_table.start_date' ) ); @endphp</em></div>
+      <div class="sub header"><em>@php echo date( "F j, Y, g:i a", $actionpod->display( 'action_id.start_date' ) ); @endphp</em></div>
     </h1>
-    @php echo $actionpod->display( 'action_table.description' ); @endphp
+    @php echo $actionpod->display( 'action_id.description' ); @endphp
     <div class="listing-cta">
       <a href="@php echo the_permalink(); @endphp">
         <button class="ui large violet basic button">Take Action</button>

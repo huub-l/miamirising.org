@@ -12,7 +12,7 @@
           Event
           <div class="detail">@php echo $eventpod->display('event_type'); @endphp</div>
         </a>
-        @php echo $eventpod->display( 'event_table.embed_full_layout_only_styles' ); @endphp
+        @php echo $eventpod->display( 'event_info.embed_full_layout_only_styles' ); @endphp
         @include('partials.events.events-sponsors')
       @php endwhile; @endphp
   </div>
