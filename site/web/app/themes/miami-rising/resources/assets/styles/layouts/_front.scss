@@ -1,0 +1,74 @@
+.front-page {
+  main.main {
+    padding:0rem 0rem 0rem 0rem;
+    * {
+      @include mobile {
+        text-align:center;
+      }
+    }
+    .block {
+      padding:  5rem 0rem 5rem 0rem;
+      position: relative;
+      background: brand-color('background','light');
+      @include mobile {
+        .label {
+          margin-bottom: 1rem;
+        }
+      }
+      @include tablet {
+        .label {
+          margin-bottom: spacer('quarter');
+        }
+      }
+      .block-header {
+        margin: auto auto spacer('double') auto;
+        @include tablet {
+          margin-right: none;
+        }
+        @include mobile {
+          margin-right: none;
+        }
+      }
+      h2 {
+        font-size: text-scale('xl');
+        line-height: line-height('md');
+        padding-right: spacer('half');
+        .highlight {
+          margin: auto spacer('quarter') auto spacer('quarter');
+          @include highlight('accent','foreground');
+        }
+      }
+      p {
+        padding-right:2rem;
+        @include mobile {
+          padding-right:0rem;
+        }
+      }
+    }
+  }
+}
+
+.banner-header {
+  z-index:10;
+  width:100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem!important;
+  margin: 0rem!important;
+  background: brand-color('flavor','dark')!important;
+  h2.header {
+    color: brand-color('background','light')!important;
+    font-size: 4rem;
+    line-height: 4rem;
+    padding:0rem;
+    margin:0rem;
+    text-align:center;
+  }
+}
+
+.groups-banner.banner-header {
+  background: brand-color('primary','dark')!important;
+}
+
+.block.card-listing {
+  padding-bottom: 5rem;
+}

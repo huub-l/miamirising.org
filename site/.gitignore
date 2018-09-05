@@ -1,12 +1,50 @@
-# Application
+# Plugins
 web/app/plugins/*
-!web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
-web/app/upgrade
+
+# .. except for ...
+!web/app/plugins/.gitkeep
+
+# Homebrew
+!web/app/plugins/wp-action-network-custom
+
+# Pojo
+!web/app/plugins/elementor-pro
+
+# WPForms
+!web/app/plugins/wpforms
+!web/app/plugins/wpforms-zapier
+!web/app/plugins/wpforms-stripe
+
+# ElegantThemes
+!web/app/plugins/divi-builder
+!web/app/plugins/monarch
+!web/app/plugins/bloom
+
+#Delicious Brains
+!web/app/plugins/wp-migrate-db-pro
+!web/app/plugins/wp-migrate-db-pro-cli
+!web/app/plugins/wp-migrate-db-pro-media-files
+!web/app/plugins/wp-migrate-db-pro-multisite-tools
+!web/app/plugins/wp-migrate-db-pro-theme-plugin-files
+
+#Pojo
+!web/app/plugins/elementor-pro
+
+# Washington State University Content Syndicate Multisite Feed
+!web/app/plugins/WSUWP-Content-Syndicate
+
+# Uploads
 web/app/uploads/*
+
+# .. except for ...
 !web/app/uploads/.gitkeep
 
+# Upgrade data
+web/app/upgrade
+
 # WordPress
+web/app/cache/*
 web/wp
 web/.htaccess
 
@@ -17,6 +55,3 @@ web/.htaccess
 
 # Composer
 /vendor
-
-# Project Specific
-web/app/plugins/elementor-pro/*

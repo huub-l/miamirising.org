@@ -1,53 +1,80 @@
 $title-pad: 1rem;
 
-body {
-  h1 {
-    font-size:3em;
-  }
-  h2 {
-    font-size:2em;
-  }
-  h3 {
-    font-size:1.5em;
-  }
-  p {
-    font-size:1em;
-  }
-  ul li,
-  ol li,
-  textarea,
-  input,
-  select option {
-    font-family: $font-family;
-  }
-  .teal-highlight {
-    display: inline!important;
-    background: rgb(127,255,212)!important;
-    padding: .5rem !important;
-  }
+html.ios {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+html.ios,
+html.ios body {
+  height: initial !important;
+}
 
-  .teal-highlight--wrapping {
-    position: relative!important;
-    left: 0rem !important;
-    padding-left: .5rem!important;
-    box-shadow: $title-pad 0 0 rgb(127,255,212),
-                $title-pad*-1 0 0 rgb(127,255,212)!important;
+main.main {
+  padding:5rem 0rem 5rem 0rem;
+}
 
-  }
+h3 {
+  font-size: 2.5rem;
+}
+
+.teal-highlight {
+  display: inline!important;
+  background: rgb(127,255,212)!important;
+  padding: .5rem !important;
+}
+.teal-highlight--wrapping {
+  position: relative!important;
+  left: 0rem !important;
+  padding-left: .5rem!important;
+  box-shadow: $title-pad 0 0 rgb(127,255,212),
+              $title-pad*-1 0 0 rgb(127,255,212)!important;
+
+}
+
+.highlight {
+  display: inline;
+  background: $color-primary;
+  color: $color-white;
+  padding: .5rem;
+}
+.highlight--wrapping {
+  position: relative;
+  left: .5rem;
+  padding-left: 0;
+  box-shadow: .5rem 0 0 $color-primary,
+              -.5rem 0 0 $color-primary;
 }
 
 .page.header {
   h1.brand {
     a {
-      color:rgba(0, 0, 0, 0.8);
+      color: brand-color('foreground','dark');
     }
   }
   .secondary.menu {
     .active {
-      background:rgba(0,0,0,0);
-      border: 1px solid rgba(0,0,0,.8);
+      background:color('background','dark');
+      color: color('foreground','light');
     }
   }
+}
+
+.app {
+  .event .ui.label {
+      margin-bottom  : spacer('half');
+      text-transform : uppercase;
+
+      .detail {
+        font-weight : 300;
+        color       : white!important;
+        opacity     : 1;
+
+      }
+    }
+  }
+
+.ui.violet.label {
+  background-color:rgba(185,29,255,1)!important;
 }
 
 

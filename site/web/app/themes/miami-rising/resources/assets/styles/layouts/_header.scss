@@ -1,7 +1,41 @@
 // TODO: .banner .nav li {}
 // TODO: .banner .nav a {}
 
-.top.menu {
+.ui.top.menu {
+  max-height:5rem;
   margin-top:0rem;
+  margin-bottom:0rem;
   border-radius: 0;
+  .container {
+    a#brand {
+      background:white;
+      svg {
+        fill:black;
+      }
+      padding-left:none!important;
+    }
+  }
+  .svg {
+    height:auto;
+    width:12rem;
+  }
+  .right {
+    a.item:not(#hamburger) {
+      @include mobile {
+        display: none;
+      }
+    }
+    a#hamburger {
+      @include tablet {
+        display:none;
+      }
+      @include desktop {
+        display:none;
+      }
+    }
+  }
+}
+.ui.sidebar.menu {
+  background: $brand-primary;
+  width:100vw;
 }

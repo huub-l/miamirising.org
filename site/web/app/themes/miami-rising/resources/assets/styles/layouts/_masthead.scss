@@ -1,9 +1,13 @@
 .ui.segment.masthead {
+  border-radius:0rem;
+  margin:0rem;
+  padding:0rem;
+  border:none;
   background: -webkit-linear-gradient(to right, rgb(127,255,212), rgb(8, 193, 131));  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, rgb(127,255,212), rgb(10, 203, 138)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-image: url(../images/pollution-truck-colorized.svg);
+  background-image: url(../images/svg/pollution-truck-colorized.svg);
   background-size: cover;
-  background-position: bottom center;
+  background-position: center center;
   &* {
     color:#ffffff;
   }
@@ -13,9 +17,28 @@
     width:100%;
     min-height:5px!important;
     margin-bottom:5rem;
+    @include mobile {
+      margin-bottom:0rem;
+    }
   }
   .ui.anime-banner {
+    .ui.grid {
+      margin: 0rem;
+      .stretched.row {
+        padding-bottom: 0rem;
+        .sixteen.wide {
+          padding-left: 0rem;
+          padding-right: 0rem;
+        }
+      }
+    }
+    @include mobile {
+      margin-left: 0rem!important;
+      margin-right:0rem!important;
+    }
     #can-do-svg-container {
+      position:relative;
+      top:5rem;
       #can-do {
         @include mobile {
           display:none;
@@ -26,8 +49,6 @@
       }
     }
     svg {
-      overflow: visible;
-      pointer-events: none!important;
       #miami-rising-logo {
         transform: rotateX('15deg');
         pointer-events: none!important;
@@ -37,10 +58,13 @@
       }
     }
     #rise-logo {
+      overflow: visible;
+      pointer-events: none!important;
       left: 0;
       right: 0;
       max-width:75%;
-      margin-top:5rem; margin-bottom:5rem;
+      margin-top:5rem;
+      margin-bottom:5rem;
       #event-logo {
         z-index:2;
       }
@@ -48,31 +72,35 @@
   }
 }
 
-.block {
-  position:relative;
-  z-index:10;
-  padding:5rem 0rem 0rem 0rem;
-  background:rgba(255,255,255,1);
-  h2 {
-    font-size:3rem;
-    padding-right:2rem;
-    margin-bottom:2rem;
-    .highlight {
-      display: inline;
-      background: $color-primary;
-      color: $color-white;
-      padding: .5rem;
-    }
-
-    .highlight--wrapping {
-      position: relative;
-      left: .5rem;
-      padding-left: 0;
-      box-shadow: .5rem 0 0 $color-primary,
-                  -.5rem 0 0 $color-primary;
-    }
+#view-title {
+  h1 {
+    margin: calc(1rem - 0.14285714rem) 4rem 1rem;
+    font-family: $font-family;
+    font-style: italic;
+    font-weight:500;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 1.25;
+    z-index: 1;
+    padding: 1rem;
+    text-align: center;
   }
-  p {
-    padding-right:2rem;
+}
+
+.sub.masthead {
+  .title-area {
+    padding:5rem 0rem 5rem 0rem;
+    h1.header {
+      font-size:3rem;
+      margin: 0rem;
+      .sub.header {
+        font-family: $font-family;
+        text-transform:none;
+        font-style:italic;
+        a {
+          color:white;
+        }
+      }
+    }
   }
 }

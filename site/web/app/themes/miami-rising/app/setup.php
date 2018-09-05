@@ -55,6 +55,12 @@ add_action('after_setup_theme', function () {
     add_theme_support('post-thumbnails');
 
     /**
+     * Enable Gutenberg wide-align
+     * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+     */
+    add_theme_support( 'align-wide' );
+
+    /**
      * Enable HTML5 markup support
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#html5
      */
@@ -181,4 +187,17 @@ add_action('after_setup_theme', function () {
     sage('blade')->compiler()->directive('asset', function ($asset) {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
+
+    // Add @ifempty for Loops
+    sage('blade')->compiler()->directive('ifempty', function($expression)
+    {
+        return "<?php if(count$expression == 0): ?>";
+    });
+
+    // Add @endifempty for Loops
+    sage('blade')->compiler()->directive('endifempty', function($expression)
+    {
+        return '<?php endif; ?>';
+    });
+
 });

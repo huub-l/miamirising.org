@@ -113,3 +113,23 @@ add_filter('sage/template/app/data', function ($data) {
         'sf_submit_text' => esc_attr_x('Search', 'submit button', 'sage'),
     ];
 });
+
+/**
+ * Blade SVG for Sage
+ * https://github.com/Log1x/blade-svg-sage
+ */
+add_filter('bladesvg_spritesheet_path', function () {
+    return \BladeSvgSage\get_dist_path('images/svg');
+});
+add_filter('bladesvg_image_path', function () {
+    return \BladeSvgSage\get_dist_path('images/svg');
+});
+add_filter('bladesvg_inline', function () {
+    return true;
+});
+add_filter('bladesvg_class', function () {
+    return 'svg';
+});
+add_filter('bladesvg_sprite_prefix', function () {
+    return '';
+});

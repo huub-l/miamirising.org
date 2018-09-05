@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2d3e048aeb76458e5b8904fe0bbfadf",
+    "content-hash": "d77739cb90a2049174923273c92588e6",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -251,7 +251,7 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v5.6.34",
+            "version": "v5.6.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -295,7 +295,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v5.6.34",
+            "version": "v5.6.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -339,7 +339,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.6.34",
+            "version": "v5.6.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -383,7 +383,7 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v5.6.34",
+            "version": "v5.6.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -428,7 +428,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v5.6.34",
+            "version": "v5.6.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -480,7 +480,7 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v5.6.34",
+            "version": "v5.6.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
@@ -538,16 +538,16 @@
         },
         {
             "name": "illuminate/view",
-            "version": "v5.6.33",
+            "version": "v5.6.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
-                "reference": "8d4e1c4d8c133eaca33c94ee35b7c0d2ef1dc66f"
+                "reference": "87645c175810ffe2969318d004138eb786b99dd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/view/zipball/8d4e1c4d8c133eaca33c94ee35b7c0d2ef1dc66f",
-                "reference": "8d4e1c4d8c133eaca33c94ee35b7c0d2ef1dc66f",
+                "url": "https://api.github.com/repos/illuminate/view/zipball/87645c175810ffe2969318d004138eb786b99dd9",
+                "reference": "87645c175810ffe2969318d004138eb786b99dd9",
                 "shasum": ""
             },
             "require": {
@@ -582,7 +582,7 @@
             ],
             "description": "The Illuminate View package.",
             "homepage": "https://laravel.com",
-            "time": "2018-07-19T23:06:53+00:00"
+            "time": "2018-09-02T11:28:46+00:00"
         },
         {
             "name": "johnbillion/extended-cpts",
@@ -629,6 +629,44 @@
             "description": "A library which provides extended functionality to WordPress custom post types and taxonomies.",
             "homepage": "https://github.com/johnbillion/extended-cpts/",
             "time": "2017-11-01T16:56:21+00:00"
+        },
+        {
+            "name": "log1x/blade-svg-sage",
+            "version": "v1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Log1x/blade-svg-sage.git",
+                "reference": "c41f1180d1eab3ea1040eb8bb2d02082bccc9c20"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Log1x/blade-svg-sage/zipball/c41f1180d1eab3ea1040eb8bb2d02082bccc9c20",
+                "reference": "c41f1180d1eab3ea1040eb8bb2d02082bccc9c20",
+                "shasum": ""
+            },
+            "require": {
+                "nothingworks/blade-svg": "^0.2.1",
+                "wikimedia/relpath": "^2.1"
+            },
+            "type": "package",
+            "autoload": {
+                "files": [
+                    "src/helpers.php",
+                    "src/blade-svg-sage.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brandon Nifong",
+                    "email": "brandon@tendency.me"
+                }
+            ],
+            "homepage": "https://github.com/log1x/blade-svg-sage",
+            "time": "2018-02-06T19:18:31+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -684,6 +722,56 @@
                 "time"
             ],
             "time": "2018-08-07T08:39:47+00:00"
+        },
+        {
+            "name": "nothingworks/blade-svg",
+            "version": "v0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adamwathan/blade-svg.git",
+                "reference": "fad56a6e5fb970e55b9745e547106ca09273fe24"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adamwathan/blade-svg/zipball/fad56a6e5fb970e55b9745e547106ca09273fe24",
+                "reference": "fad56a6e5fb970e55b9745e547106ca09273fe24",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "^5.3",
+                "illuminate/support": "^5.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^5.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BladeSvg\\BladeSvgServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BladeSvg\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Wathan",
+                    "email": "adam.wathan@gmail.com"
+                }
+            ],
+            "time": "2017-08-13T20:55:40+00:00"
         },
         {
             "name": "psr/container",
@@ -932,16 +1020,16 @@
         },
         {
             "name": "symfony/debug",
-            "version": "v4.1.3",
+            "version": "v4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "9316545571f079c4dd183e674721d9dc783ce196"
+                "reference": "47ead688f1f2877f3f14219670f52e4722ee7052"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/9316545571f079c4dd183e674721d9dc783ce196",
-                "reference": "9316545571f079c4dd183e674721d9dc783ce196",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/47ead688f1f2877f3f14219670f52e4722ee7052",
+                "reference": "47ead688f1f2877f3f14219670f52e4722ee7052",
                 "shasum": ""
             },
             "require": {
@@ -984,11 +1072,11 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T11:24:31+00:00"
+            "time": "2018-08-03T11:13:38+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v4.1.3",
+            "version": "v4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -1096,16 +1184,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v4.1.3",
+            "version": "v4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "6fcd1bd44fd6d7181e6ea57a6f4e08a09b29ef65"
+                "reference": "fa2182669f7983b7aa5f1a770d053f79f0ef144f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/6fcd1bd44fd6d7181e6ea57a6f4e08a09b29ef65",
-                "reference": "6fcd1bd44fd6d7181e6ea57a6f4e08a09b29ef65",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/fa2182669f7983b7aa5f1a770d053f79f0ef144f",
+                "reference": "fa2182669f7983b7aa5f1a770d053f79f0ef144f",
                 "shasum": ""
             },
             "require": {
@@ -1161,13 +1249,56 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T11:24:31+00:00"
+            "time": "2018-08-07T12:45:11+00:00"
+        },
+        {
+            "name": "wikimedia/relpath",
+            "version": "2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wikimedia/RelPath.git",
+                "reference": "35e701ff16abf461bb8676a9d9177f86fa0b2c94"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wikimedia/RelPath/zipball/35e701ff16abf461bb8676a9d9177f86fa0b2c94",
+                "reference": "35e701ff16abf461bb8676a9d9177f86fa0b2c94",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "jakub-onderka/php-parallel-lint": "^0.9.0.0",
+                "mediawiki/mediawiki-codesniffer": "15.0.0",
+                "phpunit/phpunit": "^4.8.9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/RelPath/RelPath.php",
+                    "src/Wikimedia/RelPath.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ori Livneh",
+                    "email": "ori@wikimedia.org"
+                }
+            ],
+            "description": "Compute a relative filepath between two paths.",
+            "homepage": "https://www.mediawiki.org/wiki/RelPath",
+            "time": "2018-01-18T21:23:40+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "illuminate/console",
-            "version": "v5.6.34",
+            "version": "v5.6.37",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
@@ -1217,16 +1348,16 @@
         },
         {
             "name": "roots/sage-installer",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/sage-installer.git",
-                "reference": "f511e9ad8b7b10d3d809f3b645b4d44a9612874a"
+                "reference": "5906db283b5b0a6117d87e2cc971afb9a66b135d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/sage-installer/zipball/f511e9ad8b7b10d3d809f3b645b4d44a9612874a",
-                "reference": "f511e9ad8b7b10d3d809f3b645b4d44a9612874a",
+                "url": "https://api.github.com/repos/roots/sage-installer/zipball/5906db283b5b0a6117d87e2cc971afb9a66b135d",
+                "reference": "5906db283b5b0a6117d87e2cc971afb9a66b135d",
                 "shasum": ""
             },
             "require": {
@@ -1272,7 +1403,7 @@
                 "theme",
                 "wordpress"
             ],
-            "time": "2018-08-17T00:33:43+00:00"
+            "time": "2018-08-24T00:01:10+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -1354,7 +1485,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.1.3",
+            "version": "v4.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -1422,16 +1553,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v3.4.14",
+            "version": "v3.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "0414db29bd770ec5a4152683e655f55efd4fa60f"
+                "reference": "4d6b125d5293cbceedc2aa10f2c71617e76262e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/0414db29bd770ec5a4152683e655f55efd4fa60f",
-                "reference": "0414db29bd770ec5a4152683e655f55efd4fa60f",
+                "url": "https://api.github.com/repos/symfony/process/zipball/4d6b125d5293cbceedc2aa10f2c71617e76262e7",
+                "reference": "4d6b125d5293cbceedc2aa10f2c71617e76262e7",
                 "shasum": ""
             },
             "require": {
@@ -1467,7 +1598,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T11:19:56+00:00"
+            "time": "2018-08-03T10:42:44+00:00"
         }
     ],
     "aliases": [],

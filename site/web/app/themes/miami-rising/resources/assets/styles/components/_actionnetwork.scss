@@ -1,125 +1,254 @@
-.app {
-  .event {
-    .ui.label {
-      background-color:rgba(185,29,255,1)!important;
-      margin-bottom:1rem;
-      text-transform:uppercase;
-      .detail {
-        font-weight:300;
-        color:white!important;
-        opacity:1;
-      }
+.can_embed.v3 #can_embed_form {
+  #can_main_col  {
+    @include mobile {
+      width : 100%;
+      float : none;
+
     }
-    .can_embed.v3 {
-      #can_embed_form {
-        .last_line {
-          h2 {
-            font-size:2.4
-          }
-        }
-        .first_line {
-          font-family: $font-family;
-          font-size: 1.07142857rem;
-        }
-        #event_desc {
-          h4 {
-            font-family: $font-family;
-            line-height:2rem!important;
-            font-size:1.2rem;
-          }
-        }
-        #action_info_inner {
-          border:none!important;
-          padding:0rem !important;
-          .action_info_user {
-            a {
-              font-size: 2.5rem;
-              font-family: $display-family;
-              color:rgba(0, 0, 0, 0.87);
-              padding-top:1rem;
-              font-weight:500;
-              display: none;
-            }
-          }
-        }
-        #can_sidebar {
-          border:none;
-          padding:0!important;
-          .action_sidebar {
-            h4 {
-              font-family: $display-family;
-              font-size:1.9rem;
-            }
-            input[type="submit"] {
-              background:  rgba(147, 29, 201, 1);
-              transition: all .3s;
-              -webkit-transition: all .3s ease-out;
-              -moz-transition: all .3s ease-out;
-              -o-transition: all .3s ease-out;
-              font-size:1.3rem;
-            }
-            input[type="submit"]:hover {
-              background:rgba(232, 67, 166, 1);
-              transition: all .3s;
-              -webkit-transition: all .3s ease-out;
-              -moz-transition: all .3s ease-out;
-              -o-transition: all .3s ease-out;
-            }
-          }
-        }
-        #can_thank_you {
-          background-color: rgba(127,255,212,.4);
-          h1 {
-            font-family: $display-family;
-            color: rgba(0, 0, 0, 0.87);
-          }
-          h4 {
-            color: rgba(0, 0, 0, 0.87);
-          }
-          #action_info {
-            border:none;
-            color: rgba(0, 0, 0, 0.87);
-            .action_info_user {
-              color: rgba(0, 0, 0, 0.87);
-              a {
-                color: rgba(0, 0, 0, 0.87);
-              }
-            }
-          }
-          #ty_instructions {
-            display:none;
-            #can_alt_title {
-              display:none;
-            }
-            p {
-              color: rgba(0, 0, 0, 0.87);
-            }
-          }
-        }
-        .clearfix {
-          div#referral_code_select_wrap {
-            display:none!important;
-          }
-          input.js-direct_link.direct_link {
-            display:none!important;
-          }
-          label {
-            display:none!important;
-          }
-          textarea {
-            display:none!important;
-          }
-          #embed_toggle-open {
-            display:none!important;
-          }
-          .can_thank_you-block h4 {
-            display:none!important;
-          }
-        }
-        .discussion-board {
-          display:none!important;
+
+    @include desktop {
+      width : 55%;
+      float : left;
+
+    }
+
+    .last_line {
+      @include mobile {
+        margin : spacer('half') 0rem spacer() 0rem;
+
+      }
+
+      h2 {
+        margin-top: spacer('quarter');
+        font-size:  text-scale('xl');
+        line-height: line-height('md');
+
+        @include mobile {
+          letter-spacing : 0rem;
         }
       }
     }
+
+    .first_line {
+      @include text-setting('xs');
+      font-family:  $font-family;
+      color:        brand-color('foreground', 'light');
+
+      .graytext {
+        @include text-setting('xs');
+        color:         brand-color('foreground', 'dark');
+        display:       block;
+        margin-top:    spacer('half');
+        margin-bottom: spacer('half');
+
+      }
+
+      @include mobile {
+        margin-top: spacer('half');
+        .graytext {
+          text-align: center;
+        }
+      }
+    }
+
+    .event_map_wrap {
+      height          : auto;
+
+      #map_canvas {
+        height        : 20rem;
+
+      }
+    }
+
+    #event_desc h4 {
+      font-family       : $font-family;
+      line-height       : 2rem!important;
+      font-size         : 1.2rem;
+
+      @include mobile {
+        margin-top      : 2rem;
+
+      }
+    }
+
+    #action_info_inner {
+      border             : none!important;
+      padding            : 0rem !important;
+
+      @include tablet {
+        margin-bottom : 0rem;
+      }
+
+      @include desktop {
+        margin-bottom : 0rem;
+      }
+
+      .action_info_user a {
+        display : none;
+
+      }
+
+      .action_owner_title {
+        @include mobile {
+          h5 {
+            font-size : 1.5rem;
+
+          }
+        }
+      }
+
+      .action_owner {
+        @include mobile {
+          text-align : center;
+
+          .action_author_avatar {
+            float        : none;
+            width        : 50px;
+            margin-left  : auto;
+            margin-right : auto;
+
+          }
+        }
+      }
+    }
+  }
+
+  #can_sidebar {
+    border   : none;
+    padding  : 0!important;
+    margin-top: spacer('quarter');
+
+    @include mobile {
+      width : 100%;
+      float : none;
+
+    }
+
+    @include desktop {
+      width : 40%;
+      float : right;
+
+    }
+
+    .action_sidebar {
+      h4 {
+        font-family : $display-family;
+        font-size   : text-scale('lg');
+        text-align  : right!important;
+        position    : initial;
+        width       : 100%;
+        display     : inline;
+        background  : brand-color('accent') !important;
+        padding     : 0rem spacer('half') 0rem spacer('half') !important;
+      }
+      h4::after {
+        display : none;
+      }
+      form {
+        margin-top : 2rem;
+        .international_link-wrap {
+          display : none;
+
+        }
+        input[type="submit"] {
+          background         : brand-color('primary','dark');
+          transition         : all .3s;
+          -webkit-transition : all .3s ease-out;
+          -moz-transition    : all .3s ease-out;
+          -o-transition      : all .3s ease-out;
+          font-size          : text-scale('md');
+          margin-top         : spacer('half');
+          margin-bottom      : 0rem;
+          border-bottom      : none;
+        }
+        input[type="submit"]:hover {
+          background         : brand-color();
+          transition         : all .3s;
+          -webkit-transition : all .3s ease-out;
+          -moz-transition    : all .3s ease-out;
+          -o-transition      : all .3s ease-out;
+        }
+      }
+    }
+  }
+
+  #can_thank_you {
+    background-color : rgba(127,255,212,.4);
+
+    h1 {
+      font-family : $display-family;
+      color       : $color-font;
+
+    }
+
+    h4 {
+      color : $color-font;
+
+    }
+
+    #action_info {
+      border  : none;
+      color   : $color-font;
+
+      .action_info_user {
+        color : $color-font;
+
+        a {
+          color : $color-font;
+
+        }
+      }
+    }
+
+    #ty_instructions {
+      display : none;
+
+      #can_alt_title {
+        display : none;
+
+      }
+
+      p {
+        color : rgba(0, 0, 0, 0.87);
+
+      }
+    }
+  }
+
+  .clearfix {
+    div#referral_code_select_wrap {
+      display : none!important;
+
+    }
+
+    input.js-direct_link.direct_link {
+      display : none!important;
+
+    }
+
+    label {
+      display : none!important;
+
+    }
+
+    textarea {
+      display : none!important;
+
+    }
+
+    #embed_toggle-open {
+      display : none!important;
+
+    }
+
+    .can_thank_you-block h4 {
+      display : none!important;
+
+    }
+  }
+
+  .discussion-board {
+    display : none!important;
+
   }
 }

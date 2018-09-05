@@ -18,7 +18,7 @@ export default {
         anime.remove('#miami-rising-logo','#miami-rising-logo #MIAMI', '#miami-rising-logo #RISING','#fist');
         anime({
           targets: '#rise-logo #Oval',
-          r: 4000,
+          r: 2800,
           duration:800,
           loop: false,
           elasticity: 0,
@@ -78,7 +78,7 @@ export default {
         anime({
           targets:      '#miami-rising-text path',
           opacity:      0.2,
-          scale:        10,
+          scale:        8,
           translateY: {
             value:      -50,
           },
@@ -106,7 +106,7 @@ export default {
             value: 0,
           },
           translateY: {
-            value: 30,
+            value: 0,
           },
         });
       },

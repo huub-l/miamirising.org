@@ -11,6 +11,7 @@
 
 /** Import theme styles */
 @import "common/global";
+@import "components/labels";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
@@ -23,3 +24,7 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
+/* hackish */
+@import "layouts/_front";
+

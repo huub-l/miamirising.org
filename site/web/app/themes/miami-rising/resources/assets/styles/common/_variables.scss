@@ -1,23 +1,182 @@
 /** Colors */
-$brand-primary:         #525ddc;
-$color-primary:         #525ddc;
+$brand-primary:         rgb(185, 29, 255);
+$color-primary:         rgb(185, 29, 255);
+$brand-secondary:       rgb(127,255,212);
+$color-teal:            rgb(127,255,212);
+$color-tertiary:        rgb(82, 93, 220);
+$brand-tertiary:        rgb(82, 93, 220);
 $color-white:           rgba(255,255,255,1);
+$color-font:            rgba(0, 0, 0, 0.87);
+$color-font-light:      rgba(0, 0, 0, 0.60);
+
+$brand-colors: (
+  'primary': (
+    'base': rgb(185, 29, 255),
+    'light': rgb(197, 79, 252),
+    'dark': rgb(151, 16, 213)
+  ),
+  'accent': (
+    'base': rgb(127,255,212),
+    'light': rgb(189, 255, 233),
+    'dark': rgb(34, 240, 171)
+  ),
+  'flavor': (
+    'base': rgb(82, 93, 220),
+    'light': rgb(111, 121, 230),
+    'dark': rgb(50, 62, 199),
+  ),
+  'foreground': (
+    'base': rgba(0, 0, 0, .87),
+    'light': rgba(0, 0, 0, 0.667),
+    'dark': rgba(0, 0, 0, 0.913)
+  ),
+  'background': (
+    'base': rgb(248, 245, 245),
+    'light': rgb(255, 255, 255),
+    'dark': rgb(221, 221, 221)
+  )
+);
+
+$contrast-colors: (
+  'dark': (
+    'primary': rgb(255, 255, 255),
+    'secondary': rgba(255, 255, 255, .70),
+    'disabled': rgba(255, 255, 255, .5),
+    'hint': rgba(255, 255, 255, .12)
+  ),
+  'light': (
+    'primary': rgba(0, 0, 0, .87),
+    'secondary': rgba(0, 0, 0, .54),
+    'disabled': rgba(0, 0, 0, .38),
+    'hint': rgba(0, 0, 0, .12)
+  ),
+);
+
+@function brand-color($key: 'primary', $variant: 'base') {
+  $color-map: map-get($brand-colors, $key);
+  @return map-get($color-map, $variant);
+}
+
+@function brand-contrast($background: 'light', $type: 'primary') {
+  $map: map-get($contrast-colors, $background);
+  @return map-get($map, $type);
+}
+
+@mixin brand-contrast($background: 'light', $type: 'primary') {
+  color: brand-contrast($background, $type);
+}
+
+/** flavorings */
+@mixin highlight($background: 'accent', $text: 'foreground', $background-variant: 'base', $text-variant: 'dark') {
+  background: brand-color($background, $background-variant) !important;
+  color: brand-color($text, $text-variant) !important;
+  box-shadow:
+    .5rem 0 0 brand-color($background, $background-variant),
+    -.5rem 0 0 brand-color($background, $background-variant);
+  position: relative;
+  left: 0rem;
+  display: inline!important;
+  padding: .5rem .5rem 0rem .5rem !important;
+}
+
+/**
+ usage
+
+  .selector {
+    @include contrast('dark');
+    // or @include contrast('dark', 'secondary'); for more faded content
+  }
+*/
+
+/** typography */
+$base-font-size: 1.75rem;
+$base-line-height: $base-font-size;
+
+$text-settings: (
+  'xs': (
+    font-size: 1rem, // 12px
+    line-height: $base-line-height
+  ),
+  'sm': (
+    font-size: 1.25rem, // 14px
+    line-height: $base-line-height
+  ),
+  'base': (
+    font-size: 1.15rem, // 16px
+    line-height: $base-line-height
+  ),
+  'md': (
+    font-size: 1.5rem, // 18px
+    line-height: $base-line-height * 2
+  ),
+  'lg': (
+    font-size: 2.25rem, // 20px
+    line-height: $base-line-height * 2
+  ),
+  'xl': (
+    font-size: 3rem, // 24px
+    line-height: $base-line-height * 2
+  )
+);
+
+@function text-scale($level: 'base') {
+  @return map-get(map-get($text-settings, $level), 'font-size');
+}
+
+@function line-height($level: 'base') {
+  @return map-get(map-get($text-settings, $level), 'line-height');
+}
+
+@mixin text-setting($level) {
+  font-size: text-scale($level);
+  line-height: line-height($level);
+}
+
+/*
+  .selector{
+    @include text-setting('xs');
+  }
+*/
 
 /** Box Model  */
-$spacer:                2rem;
+$base-spacer: 2rem;
+$spacer: 2rem;
 
-/** Mixins */
+$spacer-settings: (
+  'quarter': (
+    ($base-spacer / 4)
+  ),
+  'half': (
+    ($base-spacer / 2)
+  ),
+  'base': (
+    $base-spacer
+  ),
+  'double': (
+    ($base-spacer * 2)
+  ),
+  'block': (
+    ($base-spacer * 2.5)
+  )
+);
+
+@function spacer($size: 'base') {
+  @return map-get($spacer-settings, $size);
+}
+
+/** media queries */
+
 $tablet-width: 768px;
 $desktop-width: 1200px;
 
 @mixin mobile {
-  @media (max-width: 768px) {
+  @media (max-width: $tablet-width + 1) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media (min-width: 768px) and (max-width: 1199px) {
+  @media (min-width: ) and (max-width: 1199px) {
     @content;
   }
 }

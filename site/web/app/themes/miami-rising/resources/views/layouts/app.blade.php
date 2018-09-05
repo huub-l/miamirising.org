@@ -3,9 +3,10 @@
   @include('partials.head')
   <body @php body_class() @endphp>
     @php do_action('get_header') @endphp
-    @include('partials.header')
-    <div class="ui container" role="document">
+    @include('partials.nav.nav')
+    <div class="dimmed pusher" role="document">
       <div class="content">
+        @include('partials.title.title')
         <main class="main">
           @yield('content')
         </main>

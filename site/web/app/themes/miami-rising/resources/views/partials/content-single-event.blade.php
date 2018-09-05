@@ -1,19 +1,12 @@
 <div class="sixteen wide mobile ten wide computer column single-event-content">
   <div class="event">
     @php
-      $eventpod = pods('event');
-      $params = array(
-        'limit' => 1,
-        'id' => get_the_id(),
-      );
-      $eventpod->find($params);
-      while( $eventpod->fetch() ) : @endphp
+      $event = pods('event',get_the_ID());
+    @endphp
         <a class="ui violet label">
           Event
-          <div class="detail">@php echo $eventpod->display('event_type'); @endphp</div>
+          <div class="detail">@php echo $event->display('event_type'); @endphp</div>
         </a>
-        @php echo $eventpod->display( 'event_info.embed_full_layout_only_styles' ); @endphp
-        @include('partials.events.events-sponsors')
-      @php endwhile; @endphp
+        @php echo $event->display( 'an_form.embed_full_layout_only_styles' ); @endphp
   </div>
 </div>
