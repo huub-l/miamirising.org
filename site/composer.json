@@ -45,6 +45,7 @@
     "wpackagist-plugin/cdn-enabler":">=1",
     "wpackagist-plugin/elementor":"2.2.0",
     "wpackagist-plugin/email-templates":">=1.2.2.3",
+    "wpackagist-plugin/gutenberg":">=3.7",
     "wpackagist-plugin/imagify":">=1.8.0",
     "wpackagist-plugin/inline-svg-elementor":">=1.2.0",
     "wpackagist-plugin/members":">=2.1.0",

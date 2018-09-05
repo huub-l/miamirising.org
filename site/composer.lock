@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c043ad6ecec13fcab0df197a17a7777",
+    "content-hash": "56e5c4242750a217ba928b38a1498499",
     "packages": [
         {
             "name": "composer/installers",
@@ -571,6 +571,26 @@
             "homepage": "https://wordpress.org/plugins/email-templates/"
         },
         {
+            "name": "wpackagist-plugin/gutenberg",
+            "version": "3.7.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/gutenberg/",
+                "reference": "tags/3.7.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/gutenberg.3.7.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/gutenberg/"
+        },
+        {
             "name": "wpackagist-plugin/imagify",
             "version": "1.8.1.1",
             "source": {
@@ -732,15 +752,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "8.1.1",
+            "version": "8.1.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/8.1.1"
+                "reference": "tags/8.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.8.1.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.8.1.2.zip",
                 "reference": null,
                 "shasum": null
             },
