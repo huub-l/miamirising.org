@@ -28,6 +28,13 @@
   text-align: right;
 }
 
+.wp-block-cover-image {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: auto;
+  max-width: 1000%;
+}
+
 @include mobile {
 
   /* .alignwide img,
