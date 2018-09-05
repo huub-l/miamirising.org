@@ -8,9 +8,33 @@
     <div class="dimmed pusher" role="document">
       <div class="content">
         <main class="main">
+
           @include('partials.front-page.synopsis')
-          @include('partials.front-page.actions')
-          @include('partials.front-page.groups')
+
+          @php
+          $action = pods('action');
+          $params = array(
+            'limit' => 1
+          );
+          $action->find($params);
+          if($action) : @endphp
+
+           @include('partials.front-page.actions')
+
+          @php endif; @endphp
+
+          @php
+          $group = pods('group');
+          $params = array(
+            'limit' => 1
+          );
+          $group->find($params);
+          if($group) : @endphp
+
+            @include('partials.front-page.groups')
+
+          @php endif; @endphp
+
         </main>
         @php do_action('get_footer') @endphp
         @include('partials.footer')
