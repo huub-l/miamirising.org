@@ -43,6 +43,7 @@ add_filter('body_class', function (array $classes) {
     return array_filter($classes);
 });
 
+
 /**
  * Add "… Continued" to the excerpt
  */
@@ -112,6 +113,58 @@ add_filter('sage/template/app/data', function ($data) {
         'sf_current_query' => get_search_query(),
         'sf_submit_text' => esc_attr_x('Search', 'submit button', 'sage'),
     ];
+});
+
+add_filter('sage/template/app/data', function (array $data) {
+    $params = array(
+        'limit' => 1,
+    );
+    $event_data = pods('event', $params);
+    while( $event_data->fetch() ) {
+        $data['featured_event']['teaser'] = $event_data->field('event_teaser');
+        $data['featured_event']['type']   = $event_data->field('type');
+        $data['featured_event']['form']   = $event_data->field('an_form.embed_full_layout_only_styles');
+    }
+    return $data;
+});
+
+add_filter('sage/template/app/data', function (array $data) {
+
+    $params = array(
+        'limit' => -1,
+    );
+    $group_data = pods('group', $params);
+
+    while( $group_data->fetch() ) {
+        $logo = $group_data->field('group_logo');
+        $data['groups'][] = array(
+                'title'       => $group_data->field('title'),
+                'description' => $group_data->field('group_description'),
+                'group_logo'  => pods_image_url($group_data->field('group_logo'),null),
+                'thumbnail'   => get_the_post_thumbnail_url($group_data->field('id'),'thumb'),
+                'permalink'   => get_the_permalink($group_data->field('id')),
+        );
+    }
+    return $data;
+});
+
+add_filter('sage/template/app/data', function (array $data) {
+
+    $params = array(
+        'limit' => -1,
+    );
+    $action_data = pods('action', $params);
+
+    while( $action_data->fetch() ) {
+        $data['actions'][] = array(
+                'title'       => $action_data->field('title'),
+                'description' => $action_data->field('action_description'),
+                'type'        => $action_data->field('action_type'),
+                'thumbnail'   => get_the_post_thumbnail_url($action_data->field('id'),'thumb'),
+                'permalink'   => get_the_permalink($action_data->field('id')),
+        );
+    }
+    return $data;
 });
 
 /**

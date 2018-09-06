@@ -94,6 +94,8 @@ Config::define('WP_DEBUG_DISPLAY', false);
 Config::define('SCRIPT_DEBUG', false);
 ini_set('display_errors', 0);
 
+Config::define('WP_MEMORY_LIMIT', '512M');
+
 $env_config = __DIR__ . '/environments/' . WP_ENV . '.php';
 
 if (file_exists($env_config)) {

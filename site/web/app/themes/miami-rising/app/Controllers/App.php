@@ -59,7 +59,6 @@ class App extends Controller
                 </div>";
     }
 
-
     public static function title()
     {
         if (is_home()) {
@@ -115,13 +114,17 @@ class App extends Controller
         return '';
     }
 
-    public static function all_events()
+    function do_snippet($expression = 'open')
     {
-        $eventpod = pods('an_event');
-        $params = array(
-            'limit' => -1,
-        );
-        return $eventpod->find($params);
+        if($expression == 'open')
+            return '<div class="dimmed pusher" role="document">
+                        <div class="content">
+                            <main class="main">';
+        if($expression == 'close')
+            return "<?php do_action('get_footer');
+                          \App\template('partials.footer');
+                          wp_footer();
+                          </div></div></div></body></html>";
     }
 
     public static function semantic_navigation($navigation = 'primary_navigation')

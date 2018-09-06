@@ -1,4 +1,4 @@
-@extends('layouts.rising')
+@extends('layouts.group')
 @section('content')
   <div class="ui container">
     @while(have_posts()) @php the_post() @endphp

@@ -79,7 +79,36 @@
   }
 }
 .single-group-view {
-  p {
-    text-align:center;
+  .single-group-heading {
+    h1 {
+      margin-bottom:spacer('double')
+    }
+    h1.highlight.centered, p {
+      display:inline-block;
+      text-align:center!important;
+      margin-bottom:spacer('base');
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .group.logo {
+      display:block!important;
+      margin-bottom:spacer('half');
+    }
+    .website-button {
+      text-align: center!important;
+      font-size:2.5rem!important;
+      a {
+        font-size: text-scale('lg')!important;
+      }
+      .ui.button {
+      color: brand-color('background','light')!important;
+      background-color: brand-color('flavor','dark')!important;
+      text-align:center!important;
+      margin-bottom:spacer('base');
+      }
+    }
+  }
+  .entry-content {
+    margin-top:5rem;
   }
 }
