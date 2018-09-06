@@ -93,6 +93,10 @@
     .group.logo {
       display:block!important;
       margin-bottom:spacer('half');
+      max-width:100%!important;
+      img {
+        max-width:100%!important;
+      }
     }
     .website-button {
       text-align: center!important;

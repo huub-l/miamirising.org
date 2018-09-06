@@ -11,9 +11,6 @@
             @endif
             <h1 class="ui highlight centered">@php echo $group->display('title'); @endphp</h1>
             <p>@php echo $group->display('group_description'); @endphp</p>
-            <a href="@php echo $group->display(the_permalink()); @endphp" class="website-button">
-              <div class='ui large button'>Website</div>
-            </a>
         </div>
       </div>
     </div>
@@ -34,7 +31,7 @@
     <div class="ui container">
       <div class="entry-content">
         @php
-        echo get_post_field('post_content', $single_post['ID'])
+        echo apply_filters('the_content',get_post_field('post_content', $single_post['ID']))
         @endphp
       </div>
     </div>
