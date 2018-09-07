@@ -1,4 +1,3 @@
-
   @php
     $eventpod = pods('event');
     $params = array(

@@ -53,21 +53,26 @@
   z-index:10;
   width:100%;
   padding-top: 5rem;
-  padding-bottom: 4rem!important;
-  margin: 0rem!important;
-  background: brand-color('flavor','dark')!important;
+  padding-bottom: 4rem;
+  margin: 0rem;
+  background: brand-color('flavor','light');
   h2.header {
-    color: brand-color('background','light')!important;
-    font-size: 4rem;
+    color: brand-color('background','light');
+    letter-spacing: 5px;
+    font-size: 5rem;
     line-height: 4rem;
     padding:0rem;
     margin:0rem;
     text-align:center;
   }
+  @include mobile {
+    padding-top:10rem;
+    padding-bottom:9rem;
+  }
 }
 
 .groups-banner.banner-header {
-  background: brand-color('primary','dark')!important;
+  background: #000000d4;
 }
 
 .block.card-listing {

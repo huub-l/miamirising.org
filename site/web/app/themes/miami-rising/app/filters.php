@@ -118,6 +118,7 @@ add_filter('sage/template/app/data', function ($data) {
 add_filter('sage/template/app/data', function (array $data) {
     $params = array(
         'limit' => 1,
+        'where' => 't.post_status = "Publish"',
     );
     $event_data = pods('event', $params);
     while( $event_data->fetch() ) {
@@ -132,6 +133,7 @@ add_filter('sage/template/app/data', function (array $data) {
 
     $params = array(
         'limit' => -1,
+        'where' => 't.post_status = "Publish"',
     );
     $group_data = pods('group', $params);
 
@@ -152,6 +154,7 @@ add_filter('sage/template/app/data', function (array $data) {
 
     $params = array(
         'limit' => -1,
+        'where' => 't.post_status = "Publish"',
     );
     $action_data = pods('action', $params);
 

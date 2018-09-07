@@ -19,7 +19,7 @@ class Semantic_Walker extends \Walker_Nav_Menu {
                     ( is_post_type_archive('group') && $item->url == get_post_type_archive_link('group') ) ||
                     ( is_post_type_archive('action') && $item->url == get_post_type_archive_link('action') ) ||
                     ( is_post_type_archive('event') && $item->url == get_post_type_archive_link('event') ) ||
-                    $item->url == get_post_type_archive_link($post->post_type) ) ? ' active' : '';
+                    $item->url == get_post_type_archive_link($item->post_type) ) ? ' active' : '';
         $output .= sprintf( "\n<a class='item%s' href='%s'>%s</a>\n",
             $active,
             $item->url,

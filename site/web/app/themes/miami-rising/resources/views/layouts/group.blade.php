@@ -6,8 +6,11 @@
     @include('partials.nav.nav')
     <div class="dimmed pusher" role="document">
       <div class="content">
+        @php $background = get_template_directory_uri() .'/assets/images/mtr.png'; @endphp
         @include('partials.title.general-title',
-                ['title' => 'The Miami Rising Coalition'])
+                ['title' => 'The Miami Rising Coalition',
+                 'background_image' => $background,
+                 'background_color' => 'rgb(82, 93, 220)'])
         <main class="main">
           @yield('content')
         </main>

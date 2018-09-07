@@ -38,4 +38,7 @@
 .ui.sidebar.menu {
   background: $brand-primary;
   width:100vw;
+  .item {
+    font-size: text-scale('lg');
+  }
 }

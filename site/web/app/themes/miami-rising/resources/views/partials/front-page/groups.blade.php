@@ -1,4 +1,4 @@
-@include('partials.global.banner',['title' => 'groups'])
+@include('partials.global.banner',['title' => 'Sponsored By'])
 @if($groups)
 <div class="block">
   <div class="ui container">
