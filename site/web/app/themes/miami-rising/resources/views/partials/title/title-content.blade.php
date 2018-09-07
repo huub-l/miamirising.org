@@ -5,3 +5,4 @@
     </h1>
   </div>
 </div>
+@include('partials.elementor.global.header-post')

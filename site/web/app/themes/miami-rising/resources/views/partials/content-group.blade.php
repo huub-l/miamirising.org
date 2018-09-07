@@ -7,6 +7,7 @@
     'logo'        => pods_image_url($groups->field('group_logo'),null),
   );
 @endphp
+
 <div class="ui item middle aligned">
   @if($group->logo)
     <a class="ui middle aligned small image" href="@php echo get_the_permalink(); @endphp">

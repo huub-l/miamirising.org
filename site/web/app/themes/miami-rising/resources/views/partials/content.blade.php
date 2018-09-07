@@ -6,4 +6,5 @@
   <div class="entry-summary">
     @php the_excerpt() @endphp
   </div>
+  @php the_content() @endphp
 </article>

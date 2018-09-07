@@ -90,12 +90,44 @@ add_action('widgets_init', function () {
         'after_title'   => '</h3>'
     ];
     register_sidebar([
-        'name'          => __('Primary', 'sage'),
-        'id'            => 'sidebar-primary'
+        'name'          => __('[Front Page] After Actions Banner', 'sage'),
+        'id'            => 'front-actions-banner-post'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
+        'name'          => __('[Front Page] After Actions', 'sage'),
+        'id'            => 'front-actions-post'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('[Front Page] After Groups Banner', 'sage'),
+        'id'            => 'front-groups-banner-post'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('[Front Page] After Groups', 'sage'),
+        'id'            => 'front-groups-post'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('[Front Page] Before Featured Event', 'sage'),
+        'id'            => 'front-featured-event-pre'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('[Front Page] After Featured Event', 'sage'),
+        'id'            => 'front-featured-event-post'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('[Front Page] Before Footer', 'sage'),
+        'id'            => 'global-footer-pre'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('[Front Page] After Header', 'sage'),
+        'id'            => 'global-header-post'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('[Global] After Navigation', 'sage'),
+        'id'            => 'global-nav-post'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('[Global] Sidebar', 'sage'),
+        'id'            => 'global-sidebar'
     ] + $config);
 });
 
@@ -113,26 +145,74 @@ add_action( 'elementor/theme/register_locations',function($elementor_theme_manag
 			'edit_in_content' => true,
 		]
 	);
-	$elementor_theme_manager->register_location(
-		'secondary-sidebar',
+    $elementor_theme_manager->register_location(
+		'front-featured-event-pre',
 		[
-			'label' => __( 'Secondary Sidebar', 'sage' ),
+			'label' => __( '[Front Page] Before Featured Event', 'sage' ),
 			'multiple' => false,
-			'edit_in_content' => true,
-		]
-	);
-	$elementor_theme_manager->register_location(
-		'tertiary-sidebar',
-		[
-			'label' => __( 'Tertiary Sidebar', 'sage' ),
-			'multiple' => false,
-			'edit_in_content' => true,
+			'edit_in_content' => false,
 		]
     );
     $elementor_theme_manager->register_location(
-		'clients-hero',
+		'front-featured-event-post',
 		[
-			'label' => __( 'Clients Hero', 'sage' ),
+			'label' => __( '[Front Page] After Featured Event', 'sage' ),
+			'multiple' => false,
+			'edit_in_content' => false,
+		]
+    );
+    $elementor_theme_manager->register_location(
+		'front-actions-banner-post',
+		[
+			'label' => __( '[Front Page] After Actions Title', 'sage' ),
+			'multiple' => false,
+			'edit_in_content' => false,
+		]
+    );
+    $elementor_theme_manager->register_location(
+		'front-actions-post',
+		[
+			'label' => __( '[Front Page] After Actions', 'sage' ),
+			'multiple' => false,
+			'edit_in_content' => false,
+		]
+    );
+    $elementor_theme_manager->register_location(
+		'front-groups-banner-post',
+		[
+			'label' => __( '[Front Page] After Groups Title', 'sage' ),
+			'multiple' => false,
+			'edit_in_content' => false,
+		]
+    );
+    $elementor_theme_manager->register_location(
+		'front-groups-post',
+		[
+			'label' => __( '[Front Page] After Groups', 'sage' ),
+			'multiple' => false,
+			'edit_in_content' => false,
+		]
+    );
+    $elementor_theme_manager->register_location(
+		'global-nav-post',
+		[
+			'label' => __( '[Global] After Navigation', 'sage' ),
+			'multiple' => false,
+			'edit_in_content' => false,
+		]
+    );
+    $elementor_theme_manager->register_location(
+		'global-header-post',
+		[
+			'label' => __( '[Global] After Header', 'sage' ),
+			'multiple' => false,
+			'edit_in_content' => false,
+		]
+    );
+    $elementor_theme_manager->register_location(
+		'global-footer-pre',
+		[
+			'label' => __( '[Global] Before Footer', 'sage' ),
 			'multiple' => false,
 			'edit_in_content' => false,
 		]

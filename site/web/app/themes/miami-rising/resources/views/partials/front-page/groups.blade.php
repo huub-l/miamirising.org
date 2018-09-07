@@ -1,4 +1,5 @@
 @include('partials.global.banner',['title' => 'Sponsored By'])
+@php dynamic_sidebar('front-groups-banner-post') @endphp
 @if($groups)
 <div class="block">
   <div class="ui container">
@@ -9,4 +10,5 @@
     </div>
   </div>
 </div>
+@php dynamic_sidebar('front-groups-post') @endphp
 @endif

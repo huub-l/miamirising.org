@@ -8,6 +8,7 @@
     <div class="dimmed pusher" role="document">
       <div class="content">
         <main class="main">
+          @yield('content')
           @include('partials.front-page.featured-event', [
               'teaser'  => $featured_event['teaser'],
               'form'    => $featured_event['form'],

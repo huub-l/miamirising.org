@@ -2,6 +2,6 @@
 
   @section('content')
     @while(have_posts()) @php the_post() @endphp
-      @include('partials.content-front')
+      @php the_content() @endphp
     @endwhile
   @endsection

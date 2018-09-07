@@ -13,3 +13,4 @@
     </a>
   </div>
 </div>
+@include('partials.elementor.global.nav-post')

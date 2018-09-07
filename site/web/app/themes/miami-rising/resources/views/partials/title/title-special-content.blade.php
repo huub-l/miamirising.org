@@ -3,3 +3,4 @@
     <h1 class="ui inverted header">{!! App::title() !!}</h1>
   </div>
 </div>
+@include('partials.elementor.global.header-post')

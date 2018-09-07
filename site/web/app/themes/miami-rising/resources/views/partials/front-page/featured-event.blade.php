@@ -1,3 +1,4 @@
+@php dynamic_sidebar('front-featured-event-pre') @endphp
 <div class="block">
   <div class="page ui container">
     <div class="ui two column grid">
@@ -15,3 +16,4 @@
     </div>
   </div>
 </div>
+@php dynamic_sidebar('front-featured-event-post') @endphp

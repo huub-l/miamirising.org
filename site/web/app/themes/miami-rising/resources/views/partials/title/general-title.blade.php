@@ -11,3 +11,4 @@
     {{ $title }}
   </h1>
 </div>
+@include('partials.elementor.global.header-post')

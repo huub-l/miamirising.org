@@ -7,6 +7,7 @@
           Event
           <div class="detail">@php echo $event->display('event_type'); @endphp</div>
         </a>
+        @php the_content(); @endphp
         @php echo $event->display( 'an_form.embed_full_layout_only_styles' ); @endphp
   </div>
 </div>

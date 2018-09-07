@@ -4,6 +4,7 @@
   <body @php body_class() @endphp>
     @php do_action('get_header') @endphp
     @include('partials.nav.nav')
+    @include('partials.elementor.global.nav-post')
     <div class="dimmed pusher" role="document">
       <div class="content">
         @include('partials.title.title-page')
