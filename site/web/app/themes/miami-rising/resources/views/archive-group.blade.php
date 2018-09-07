@@ -1,10 +1,12 @@
 @extends('layouts.group')
-@section('content')
-  <div class="ui container">
-  <div class="middle aligned grid ui">
-    <div class="sixteen column">
-      @include('partials.lists.group-list',
-              ['groups' => $groups])
+
+  @section('content')
+    <div class="ui container">
+      <div class="ui relaxed items">
+          @while(have_posts()) @php the_post() @endphp
+            @include('partials.content-'.get_post_type())
+          @endwhile
+          {!! get_the_posts_navigation() !!}
+      </div>
     </div>
-  </div>
-@endsection
+  @endsection

@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
-@section('content')
+  @section('content')
 
-  @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
-    </div>
-  @endif
+    @if (!have_posts())
+      <div class="alert alert-warning">
+        {{ __('Sorry, no results were found.', 'sage') }}
+      </div>
+    @endif
 
-  @while(have_posts()) @php the_post() @endphp
-    @include('partials.content-search')
-  @endwhile
+    @while(have_posts()) @php the_post() @endphp
+      @include('partials.content-search')
+    @endwhile
 
-  {!! get_search_form() !!}
+    {!! get_search_form() !!}
+    {!! get_the_posts_navigation() !!}
 
-  {!! get_the_posts_navigation() !!}
-@endsection
+  @endsection

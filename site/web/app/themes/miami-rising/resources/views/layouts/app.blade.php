@@ -6,7 +6,7 @@
     @include('partials.nav.nav')
     <div class="dimmed pusher" role="document">
       <div class="content">
-        @include('partials.title.title')
+        @include('partials.title.title-page')
         <main class="main">
           @yield('content')
         </main>

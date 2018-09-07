@@ -1,5 +1,4 @@
-<div class="action-list-entry action">
-  @php
+@php
     $actionpod = pods('action');
     $params = array(
       'limit' => -1,
@@ -7,7 +6,8 @@
     );
     $actionpod->find($params);
     while( $actionpod->fetch() ) :
-  @endphp
+@endphp
+  <div class="action-list-entry action">
     <a class="ui label">
       Action
       <div class="detail">@php $actionpod->display( 'action_type' ) @endphp</div>
@@ -21,5 +21,5 @@
         <button class="ui large basic button">Take Action</button>
       </a>
     </div>
-  @php endwhile; @endphp
-</div>
+  </div>
+@php endwhile; @endphp

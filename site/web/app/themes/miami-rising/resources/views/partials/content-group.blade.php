@@ -1,23 +1,24 @@
-  <div class="ui item group">
-    @php
-      $group = pods('group',get_the_ID());
-    @endphp
-    <div class="ui single-group-content">
-      <h2 class="ui header">
-        @php echo the_title() @endphp
-      </h2>
-      <div class="meta">
-          <p>@php echo $group->display( 'group_description' ); @endphp</p>
+@php
+  $groups = pods(null,array('limit' => -1));
+  $groups->fetch(get_the_ID());
+  $group = (object) array(
+    'name'        => $groups->field('title'),
+    'description' => $groups->field('group_description'),
+    'logo'        => pods_image_url($groups->field('group_logo'),null),
+  );
+@endphp
+<div class="ui item middle aligned">
+  @if($group->logo)
+    <a class="ui middle aligned small image" href="@php echo get_the_permalink(); @endphp">
+      <img src="@php echo $group->logo; @endphp">
+    </a>
+  @endif
+  @if($group->name && $group->description)
+    <div class="ui middle aligned content">
+      <a class="header" href="@php echo get_the_permalink(); @endphp">@php echo $group->name; @endphp</a>
+      <div class="description">
+        @php echo $group->description; @endphp
       </div>
-          <div class="listing-cta">
-            <a href="@php echo $group->display('group_website'); @endphp">
-              <button class="ui huge basic flavor button">View Website</button>
-            </a>
-          </div>
-          <div class="listing-cta">
-            <a href="@php echo $group->display('group_donation_link'); @endphp">
-              <button class="ui huge flavor button">Donate</button>
-            </a>
-          </div>
-      </div>
+    </div>
+  @endif
 </div>

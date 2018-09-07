@@ -1,6 +1,7 @@
 @extends('layouts.front-page')
-@section('content')
-  @while(have_posts()) @php the_post() @endphp
-    @include('partials.content-front')
-  @endwhile
-@endsection
+
+  @section('content')
+    @while(have_posts()) @php the_post() @endphp
+      @include('partials.content-front')
+    @endwhile
+  @endsection

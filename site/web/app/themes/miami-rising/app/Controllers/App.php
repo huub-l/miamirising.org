@@ -38,7 +38,7 @@ class App extends Controller
     public static function post_title_block()
     {
         $featured_image_url = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()), 'single-post-thumbnail');
-        $title = get_the_title();
+        $title = App::title();
         echo "<div id='view-title' style='background-image: url(". $featured_image_url .");'
                  class='wp-block-cover-image has-background-dim alignwide'>
                     <h1 class='ui inverted header wp-block-cover-image-text'>
@@ -50,8 +50,8 @@ class App extends Controller
     public static function page_title_block()
     {
         $featured_image_url = wp_get_attachment_image_url(get_post_thumbnail_id(get_the_ID()), 'single-post-thumbnail');
-        $title = get_the_title();
-        echo "  <div id='view-title' style='background-image: url(". $featured_image_url .");'
+        $title = App::title();
+        echo "<div id='view-title' style='background-image: url(". $featured_image_url .");'
                  class='wp-block-cover-image has-background-dim alignwide'>
                     <h1 class='ui inverted header wp-block-cover-image-text'>
                         $title
@@ -114,17 +114,17 @@ class App extends Controller
         return '';
     }
 
-    function do_snippet($expression = 'open')
+    public function group()
     {
-        if($expression == 'open')
-            return '<div class="dimmed pusher" role="document">
-                        <div class="content">
-                            <main class="main">';
-        if($expression == 'close')
-            return "<?php do_action('get_footer');
-                          \App\template('partials.footer');
-                          wp_footer();
-                          </div></div></div></body></html>";
+        $groups = pods(null,array('limit' => -1));
+        $groups->fetch(get_the_id());
+        $group = array(
+            'permalink'   => get_the_permalink(),
+            'name'        => $groups->field('group_name'),
+            'description' => $groups->field('group_description'),
+            'logo'        => pods_image_url($groups->field('group_logo'),null),
+        );
+        return $group;
     }
 
     public static function semantic_navigation($navigation = 'primary_navigation')
