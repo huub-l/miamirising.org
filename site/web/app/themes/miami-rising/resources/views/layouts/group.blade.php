@@ -6,7 +6,7 @@
     @include('partials.nav.nav')
     <div class="dimmed pusher" role="document">
       <div class="content">
-        @php $background = get_template_directory_uri() .'/assets/images/mtr.png'; @endphp
+        @php $background = get_template_directory_uri() .'/assets/images/pollution-truck-colorized.jpg'; @endphp
         @include('partials.title.general-title',
                 ['title' => 'The Miami Rising Coalition',
                  'background_image' => $background,
