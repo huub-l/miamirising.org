@@ -8,11 +8,8 @@
     <div class="dimmed pusher" role="document">
       <div class="content">
         <main class="main">
-          @include('partials.front-page.featured-event', [
-              'teaser'  => $featured_event['teaser'],
-              'form'    => $featured_event['form'],
-              'type'    => $featured_event['type']
-          ])
+          @include('partials.global.banner',['title' => 'Take Action'])
+          @php dynamic_sidebar('front-featured-event-post') @endphp
           @include('partials.front-page.groups', [
               'groups'  => $groups
           ])
