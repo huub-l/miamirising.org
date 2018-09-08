@@ -1,17 +1,12 @@
 $title-pad: 1rem;
 
-html.ios {
+html {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
-html.ios,
-html.ios body {
+html,
+html body {
   height: initial !important;
-}
-
- body {
-  position:relative; // that's it
-  overflow:hidden;
 }
 
 main.main {
