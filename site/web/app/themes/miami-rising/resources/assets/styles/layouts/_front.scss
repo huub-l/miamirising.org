@@ -72,7 +72,10 @@
 }
 
 .groups-banner.banner-header {
-  background: #111111;
+  background: rgb(127, 255, 212);
+  h2.ui.header {
+    color:black;
+  }
 }
 
 .block.card-listing {
