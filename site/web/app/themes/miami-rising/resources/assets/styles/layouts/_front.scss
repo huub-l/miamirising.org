@@ -52,14 +52,14 @@
   position:relative;
   z-index:10;
   width:100%;
-  padding-top: 5rem;
-  padding-bottom: 4rem;
   margin: 0rem;
   background: brand-color('flavor','light');
   h2.header {
     color: brand-color('background','light');
     letter-spacing: 5px;
-    font-size: 5rem;
+    font-size: 3rem;
+    margin-top:2rem!important;
+    margin-bottom:2rem!important;
     line-height: 4rem;
     padding:0rem;
     margin:0rem;
