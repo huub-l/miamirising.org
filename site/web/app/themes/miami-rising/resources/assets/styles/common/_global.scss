@@ -9,6 +9,10 @@ html.ios body {
   height: initial !important;
 }
 
+html, body {
+  overflow:hidden!important;
+}
+
 main.main {
   padding:5rem 0rem 5rem 0rem;
 }
