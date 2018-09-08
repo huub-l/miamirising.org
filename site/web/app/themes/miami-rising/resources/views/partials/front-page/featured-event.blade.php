@@ -10,7 +10,7 @@
           <a class="ui violet label">
             Event <div class="detail">{!! $type !!}</div>
           </a>
-              {!! $form !!}
+          {!! $form !!}
         </div>
       </div>
     </div>
