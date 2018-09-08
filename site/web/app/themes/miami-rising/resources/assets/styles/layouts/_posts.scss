@@ -80,13 +80,14 @@
       margin-left:   auto;
       margin-right:  auto;
       font-size:     2rem;
+      display: none;
     }
     p {
       display: block;
       span.highlight {
         @include       highlight('flavor', 'background', 'base', 'light');
-        font-size:     text-scale('md');
-        line-height:   line-height('md');
+        font-size:     1rem;
+        line-height:   2.6rem;
         margin-bottom: spacer('half');
         padding:       0em spacer('quarter') spacer('quarter') spacer('quarter')!important;
         display:       inline;
@@ -116,7 +117,7 @@
   .entry-content {
     margin-top:spacer('block');
     .the-title {
-      font-size: 4rem;
+      display:none;
     }
   }
 }
