@@ -16,7 +16,6 @@
   @endif
   @if($group->name && $group->description)
     <div class="ui middle aligned content">
-      <a class="header" href="@php echo get_the_permalink(); @endphp">@php echo $group->name; @endphp</a>
       <div class="description">
         @php echo $group->description; @endphp
       </div>
