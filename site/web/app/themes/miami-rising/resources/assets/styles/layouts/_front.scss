@@ -30,7 +30,7 @@
         }
       }
       h2 {
-        font-size: text-scale('xl');
+        font-size: 3rem;
         line-height: line-height('md');
         padding-right: spacer('half');
         .highlight {
@@ -64,10 +64,6 @@
     padding:0rem;
     margin:0rem;
     text-align:center;
-  }
-  @include mobile {
-    padding-top:10rem;
-    padding-bottom:9rem;
   }
 }
 
