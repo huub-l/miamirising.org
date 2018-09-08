@@ -9,8 +9,9 @@ html.ios body {
   height: initial !important;
 }
 
-html, body {
-  overflow:hidden!important;
+ body {
+  position:relative; // that's it
+  overflow:hidden;
 }
 
 main.main {
