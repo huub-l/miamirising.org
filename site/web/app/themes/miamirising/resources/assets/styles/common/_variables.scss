@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'bebas';
+  src: url('./../fonts/bebasneue.otf') format('opentype');
+}
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,600&Heebo:800');
+
+$spacer: 2rem;
+$title-pad: ($spacer/2);
+
+$brand-primary:         rgb(185, 29, 255);
+$color-primary:         rgb(185, 29, 255);
+$brand-secondary:       rgb(127, 255, 212);
+$color-teal:            rgb(127, 255, 212);
+$color-tertiary:        rgb(82, 93, 220);
+$brand-tertiary:        rgb(82, 93, 220);
+$color-white:           rgba(255, 255, 255, 1);
+$color-font:            rgba(0, 0, 0, 0.87);
+$color-font-light:      rgba(0, 0, 0, 0.6);
+
+/*
+ * Bulma
+ */
+
+// Colors
+
+$black:        hsl(0, 0%, 4%) !default;
+$black-bis:    hsl(0, 0%, 7%) !default;
+$black-ter:    hsl(0, 0%, 14%) !default;
+
+$grey-darker:  hsl(0, 0%, 21%) !default;
+$grey-dark:    hsl(0, 0%, 29%) !default;
+$grey:         hsl(0, 0%, 48%) !default;
+$grey-light:   hsl(0, 0%, 71%) !default;
+$grey-lighter: hsl(0, 0%, 86%) !default;
+
+$white-ter:    hsl(0, 0%, 96%) !default;
+$white-bis:    hsl(0, 0%, 98%) !default;
+$white:        hsl(0, 0%, 100%) !default;
+
+$orange:       hsl(14, 100%, 53%) !default;
+$yellow:       hsl(48, 100%, 67%) !default;
+$green:        $brand-secondary;
+$turquoise:    $brand-secondary;
+$cyan:         $brand-tertiary;
+$blue:         $brand-tertiary;
+$purple:       $brand-primary;
+$red:          hsl(348, 100%, 61%) !default;
+
+// Typography
+$family-display: "bebas", sans-serif;
+$family-headline: "Heebo", sans-serif;
+$family-sans-serif: 'IBM Plex Sans', "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$family-monospace: monospace !default;
+$render-mode: optimizeLegibility !default;
+
+$size-1: 3rem !default;
+$size-2: 2.5rem !default;
+$size-3: 2rem !default;
+$size-4: 1.5rem !default;
+$size-5: 1.25rem !default;
+$size-6: 1rem !default;
+$size-7: 0.75rem !default;
+
+$weight-light: 300 !default;
+$weight-normal: 400 !default;
+$weight-medium: 500 !default;
+$weight-semibold: 600 !default;
+$weight-bold: 700 !default;

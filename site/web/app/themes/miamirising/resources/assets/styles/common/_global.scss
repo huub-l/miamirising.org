@@ -1,0 +1,138 @@
+h1,
+.navbar {
+  font-family: $family-display;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $family-headline;
+}
+
+h2 {
+  font-size: $size-2;
+}
+
+h3,
+.navbar {
+  font-size: $size-3;
+}
+
+h4 {
+  font-size: $size-4;
+}
+
+h5 {
+  font-size: $size-5;
+}
+
+h6 {
+  font-size: $size-6;
+}
+
+.home h1.title {
+  letter-spacing: 0.2rem;
+}
+
+.home .page-header h1.title {
+  font-size: 10rem;
+}
+
+.home .section article {
+  margin-top: 0.5rem;
+}
+
+.home .section header {
+  margin-bottom: 3rem;
+}
+
+.home .section .two-fifths .title {
+  font-size: 4rem;
+  border-bottom: 5px solid $brand-primary;
+}
+
+.home .section .byline {
+  font-weight: normal;
+}
+
+.section.page-header {
+  padding-bottom: 6rem;
+  padding-top: 12rem;
+  background: url('../images/svg/pollution-truck-colorized.svg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: 70%;
+
+  * {
+    color: white;
+  }
+
+  h1.title {
+    font-family: $family-display;
+    font-size: 12rem;
+    line-height: 10rem;
+  }
+}
+
+.section.intro {
+  padding-bottom: 12rem;
+  padding-top: 12rem;
+  background: url('../images/waves.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: 70%;
+}
+
+.section-backplate-events {
+  background-image: -webkit-linear-gradient(309deg, #04a6d7 0%, #209cee 71%, #3287f5 100%);
+  background-image: -o-linear-gradient(309deg, #04a6d7 0%, #209cee 71%, #3287f5 100%);
+  background-image: linear-gradient(141deg, #047fa4 0%, #1a7bbc 71%, #3287f5 100%);
+}
+
+.section.events {
+  background: url('../images/svg/bench-woman.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-y: 100%;
+  background-size: cover;
+  padding-bottom: 12rem;
+  padding-top: 12rem;
+
+  * {
+    color: white;
+  }
+}
+
+.section.actions {
+  padding-bottom: 12rem;
+  padding-top: 12rem;
+  background-image: -webkit-linear-gradient(141deg, #ff0561 0, #ff3860 71%, #ff5257 100%);
+  background-image: -o-linear-gradient(141deg, #ff0561 0, #ff3860 71%, #ff5257 100%);
+  background-image: linear-gradient(141deg, #ff0561 0, #ff3860 71%, #ff5257 100%);
+
+  * {
+    color: white;
+  }
+}
+
+.section.news {
+  -webkit-box-flex: 1;
+  padding-bottom: 12rem;
+  padding-top: 12rem;
+
+  * {
+    color: white;
+  }
+}
+
+.section.footer {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  background: $brand-tertiary;
+
+  * {
+    color: white;
+  }
+}

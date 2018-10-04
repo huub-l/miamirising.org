@@ -1,0 +1,34 @@
+.highlight {
+  display: inline;
+  box-shadow: 0 -0.8em 0 $brand-primary inset;
+}
+
+.highlight-primary {
+  display: inline;
+  padding: calc(2px + 0.02em) calc(3px + 0.04em);
+  background-color: $brand-primary;
+}
+
+.highlight-secondary {
+  display: inline;
+  padding: calc(2px + 0.02em) calc(3px + 0.04em);
+  background-color: $brand-secondary;
+}
+
+.highlight-tertiary {
+  display: inline;
+  padding: calc(2px + 0.02em) calc(3px + 0.04em);
+  background-color: $brand-tertiary;
+}
+
+.highlight-white {
+  display: inline;
+  padding: calc(2px + 0.02em) calc(3px + 0.04em);
+  background-color: $color-white;
+}
+
+.highlight-black {
+  display: inline;
+  padding: calc(2px + 0.02em) calc(3px + 0.04em);
+  background-color: $black;
+}
