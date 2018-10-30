@@ -592,15 +592,15 @@
         },
         {
             "name": "wpackagist-plugin/google-analytics-for-wordpress",
-            "version": "7.2.0",
+            "version": "7.3.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
-                "reference": "tags/7.2.0"
+                "reference": "tags/7.3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.7.2.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.7.3.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -812,15 +812,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "9.0.2",
+            "version": "9.0.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/9.0.2"
+                "reference": "tags/9.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.9.0.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.9.0.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1386,12 +1386,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/paulgibbs/behat-wordpress-extension.git",
-                "reference": "c5ce691547290628912f939af52cb5b56678ca5b"
+                "reference": "741f1c414fddaf1d3321b0269eec7c11261e4f83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paulgibbs/behat-wordpress-extension/zipball/c5ce691547290628912f939af52cb5b56678ca5b",
-                "reference": "c5ce691547290628912f939af52cb5b56678ca5b",
+                "url": "https://api.github.com/repos/paulgibbs/behat-wordpress-extension/zipball/741f1c414fddaf1d3321b0269eec7c11261e4f83",
+                "reference": "741f1c414fddaf1d3321b0269eec7c11261e4f83",
                 "shasum": ""
             },
             "require": {
@@ -1443,7 +1443,7 @@
                 "extension",
                 "wordpress"
             ],
-            "time": "2018-10-06T10:04:30+00:00"
+            "time": "2018-10-27T10:11:08+00:00"
         },
         {
             "name": "psr/container",
