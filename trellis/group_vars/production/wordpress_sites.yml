@@ -8,9 +8,9 @@ wordpress_sites:
       - canonical: miamirising.org
         redirects:
           - www.miamirising.org
-    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    local_path: ../miamirising.org # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:pixelcollective/miamirising.org.git # replace with your Git repo URL
-    repo_subtree_path: site # relative path to your Bedrock/WP directory in your repo
+    repo_subtree_path: miamirising.org # relative path to your Bedrock/WP directory in your repo
     branch: master
     multisite:
       enabled: false

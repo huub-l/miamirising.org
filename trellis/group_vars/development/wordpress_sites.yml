@@ -6,7 +6,7 @@ wordpress_sites:
   miamirising.org:
     site_hosts:
       - canonical: miamirising.local
-    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    local_path: ../miamirising.org # path targeting local Bedrock site directory (relative to Ansible root)
     admin_email: developers@tinypixel.io
     multisite:
       enabled: false
