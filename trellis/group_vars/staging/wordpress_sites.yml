@@ -9,7 +9,7 @@ wordpress_sites:
     local_path: ../miamirising.org # path targeting local Bedrock site directory (relative to Ansible root)
     repo: git@github.com:pixelcollective/miamirising.org.git # replace with your Git repo URL
     repo_subtree_path: miamirising.org # relative path to your Bedrock/WP directory in your repo
-    branch: master
+    branch: development
     multisite:
       enabled: false
     ssl:
